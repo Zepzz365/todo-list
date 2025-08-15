@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+    height: auto;
+    width: auto;
+}
+#edit-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+#edit-form.hidden {
+    display: none;
+}
+#projectButtons > div{
+    height: fit-content;
+    width: fit-content;
+}
+#active-project{
+    align-self: left;
+    margin: 10px;
+    font-size: larger;
+    font-weight: bold;
+}
+body{
+    display: grid;
+    grid-template-rows: 100px 1fr auto;
+    grid-template-columns: 1fr 6fr;
+}
+form{
+    grid-area: 1/1/2/3;
+    background-color: palevioletred;
+    display: flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+form > *{
+    height: 30px;
+    flex: 1;
+    margin: 5px;
+    max-width: 150px;
+}
+#side {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    padding: 20px; 
+    gap: 20px; 
+    height: 100%; 
+}
+
+#projectButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    width: 100%; 
+}
+
+#projectButtons > div {
+    width: 100%; 
+    display: flex;
+    gap: 10px;
+}
+#projectButtons > div > button:first-child,
+#new-project-name,
+#new-project{
+    width: max(50%, 80px) !important;
+}
+#projectButtons > div > button:last-child{
+    width: 15%;
+}
+.todo{
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
+.todo > *{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    height: 30px;
+    min-width: 70px;
+    width: fit-content;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

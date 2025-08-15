@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div style="font-weight: bolder">New Todo:</div>
+      <select id="todo-proj" required></select>
+      <input type="text" id="todo-name" required placeholder="name" />
+      <input type="text" id="todo-desc" required placeholder="description" />
+      <select id="todo-pri">
+        <option value="p1">p1</option>
+        <option value="p2">p2</option>
+        <option value="p3">p3</option>
+      </select>
+      <input type="date" id="todo-date" required />
+      <button type="button" id="send-todo">send</button>
+      <button type="button" id="cancel-todo">cancel</button>
+    </form>
+    <div id="side">
+      <div id="projectButtons"></div>
+      <div>
+        <input type="text" id="new-project-name" placeholder="New Project" />
+        <button type="button" id="new-project">add new project</button>
+      </div>
+    </div>
+    <div>
+      <div id="active-project"></div>
+      <div id="content"></div>
+    </div>
+
+    <template id="template-todo">
+      <div class="todo">
+        <input type="checkbox" id="checkbox" />
+        <div class="todo-name"></div>
+        <div class="todo-pri"></div>
+        <div class="todo-due"></div>
+        <div class="todo-desc"></div>
+        <button type="button" class="todo-edit">edit</button>
+        <button type="button" class="todo-del">delete</button>
+      </div>
+    </template>
+    <form id="edit-form" class="hidden">
+      <select id="edit-todo-proj">
+        <option value="all">All</option>
+        <option value="proj1">Proj1</option>
+        <!-- diğer projeler JS ile eklenecek -->
+      </select>
+      <input type="text" id="edit-todo-name" placeholder="Title" />
+      <input type="text" id="edit-todo-desc" placeholder="Description" />
+      <select id="edit-todo-pri">
+        <option value="p1">P1</option>
+        <option value="p2">P2</option>
+        <option value="p3">P3</option>
+      </select>
+      <input type="date" id="edit-todo-date" />
+      <button type="submit" id="send-edit">Save</button>
+      <button type="button" id="cancel-edit">Cancel</button>
+    </form>
+  </body>
+</html>
