@@ -5,11 +5,9 @@ const PROJECTS_KEY = 'projects';
 const TODOS_KEY = 'allTodo';
 
 // data.js
-localStorage.clear()
 
 document.addEventListener("DOMContentLoaded", () => {
     // localStorage temizle test için
-    localStorage.clear();
 
     const PROJECTS_KEY = 'projects';
     const TODOS_KEY = 'allTodo';
